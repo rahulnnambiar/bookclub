@@ -1,0 +1,7 @@
+.Banner {
+  background-image: url("../image/book2.jpg");
+  width: 100vw;
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

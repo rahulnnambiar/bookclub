@@ -1,0 +1,39 @@
+.addbook {
+  margin: 20px;
+  padding: 20px;
+}
+form {
+  width: 100%;
+}
+input {
+  padding: 10px;
+  width: 100%;
+  border-style: none;
+}
+input[type="submit"] {
+  margin-top: 20px;
+
+  background-color: blanchedalmond;
+  border-style: none;
+}
+@media screen and (min-width: 700px) {
+  .addbook {
+    background-color: #8da683;
+    color: black;
+  }
+  .addlisting_form label {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 20px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .addbook {
+    margin: 150px;
+    padding: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+}

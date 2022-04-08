@@ -1,0 +1,16 @@
+* {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.header h3 {
+  text-align: center;
+  color: white;
+}
+.header {
+  background-color: black;
+  border: 0px;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}

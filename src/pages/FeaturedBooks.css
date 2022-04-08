@@ -1,0 +1,63 @@
+.featured_books {
+  margin: 20px;
+}
+.book_list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-content: center;
+  margin: 20px;
+  gap: 20px;
+}
+.book1 {
+  text-align: center;
+  border: 0px solid lightgray;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  width: 250px !important;
+  transition: transform 100ms ease-in;
+  padding: 10px;
+}
+.book1:hover {
+  transform: scale(1.07);
+}
+.book1 > img {
+  object-fit: fill;
+  height: 250px;
+  width: 100%;
+}
+.book1 .book_title {
+  margin-top: 20px;
+}
+.book1 > * {
+  margin-top: 10px;
+}
+.book1 .book_des {
+  text-align: left;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.book1 .book_rating {
+  text-align: left;
+}
+@media screen and (min-width: 700px) {
+  .book_list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .book_list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .book_list {
+    grid-template-columns: repeat(10, 1fr);
+    overflow-y: auto;
+  }
+}
