@@ -1,5 +1,6 @@
 import React from 'react';
 import "./BookList.css";
+import {ExpandedBook} from './ExpandedBook.js';
 import { useState,useEffect } from 'react';
 import axios from "axios";
 
@@ -40,6 +41,7 @@ const  BookList = props =>{
     
 
             </div>
+            
             
         </div>
     );

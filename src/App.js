@@ -12,8 +12,8 @@ function App() {
     return (<>
             <Nav/>
             <Banner/>
-            <FeaturedBooks/>
             <BookList/>
+            <FeaturedBooks/> 
             <AddBooks/>
         </>
     );

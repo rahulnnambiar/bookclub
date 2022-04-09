@@ -7,11 +7,11 @@ const BookSchema = new Schema({
         data:Buffer,
         contentType:String
     },
-    title:{type:String},
-    author:{type:String},
-    category:{type:String},
-    des:{type:String},
-    rating:{type:Number}
+    title:{type:String, require:true},
+    author:{type:String, require:true},
+    category:{type:String, require:true},
+    des:{type:String, require:true},
+    rating:{type:Number, require:true}
 });
 
 const Book = mongoose.model('Book', BookSchema);

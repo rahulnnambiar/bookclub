@@ -3,29 +3,39 @@ import "./FeaturedBooks.css";
 import axios from 'axios';
 import {useEffect,useState} from 'react';
 
-function FeaturedBooks(){
+const FeaturedBooks = props =>{
+    const [booklists,setBooklist] =useState([]);
+    useEffect(()=>{
+        axios.get('/api/book')
+        .then(results=>{
+            setBooklist(results.data);
+            props.setBooklistAdded(false);                        
+        })
+        .catch(error=>console.log(error));
+    },[props.booklistsAdded]);
     
     return(
         <div className='featured_books'>
             <h3>Featured Books</h3>
             <div className='book_list'>
+                {booklists.map((booklist,i)=>{return <div key={i}>
                 <div className='book1'>
-                    <div className='book_img'>
-                        <img src="https://www.pexels.com/photo/white-notebook-on-pink-shaggy-carpet-6373294/" alt='' width="200px" height="200px"></img>
-                    </div>
+    
                     <div className='book_title'>
-                        <p>Title</p>
+                        <p>{booklist.title}</p>
                     </div>
                     <div className='book_author'>
-                        <p>Author</p>
+                        <p>by {booklist.author}</p>
                     </div>
                     <div className='book_des'>
-                        <p>Description</p>
+                        <p>{booklist.des}</p>
                     </div>
                     <div className='book_rating'>
-                        <p>Rating</p>
+                        <p>Rating: {booklist.rating}/5</p>
                     </div>
                 </div>
+                </div>
+                })}
 
             </div>
             
